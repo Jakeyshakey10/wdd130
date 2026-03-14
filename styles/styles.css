@@ -1,0 +1,75 @@
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Limit main width */
+main {
+    max-width: 840px;
+}
+
+/* H1 style */
+h1 {
+    color: #333;
+}
+
+/* Profile image inside main */
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid #000;
+    padding: 5px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+/* Aside styles */
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    /* subtle transparent border */
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+}
+
+/* Image inside aside */
+aside img {
+    width: 200px;
+    height: auto;
+    /* keeps aspect ratio */
+}
+
+/* Paragraph padding */
+p {
+    padding: 0;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
+
+/* Optional: make aside sit next to main on wide screens */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main,
+aside {
+    display: inline-block;
+    vertical-align: top;
+}
