@@ -1,4 +1,10 @@
 /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -42,10 +48,9 @@ header {
 }
 
 .hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
 }
 
 .hero article {
@@ -56,6 +61,11 @@ header {
     padding: 10px;
     display: flex;
     gap: 10px;
+}
+
+.hero article img {
+    float: right;
+    width: 100px;
 }
 
 /* HISTORY GRID */
@@ -100,4 +110,15 @@ footer {
 
 .socialmedia img {
     width: 30px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #0077cc;
+    --secondary-color: #f4f4f4;
+    --dark-color: #222;
+    --text-color: #333;
 }
