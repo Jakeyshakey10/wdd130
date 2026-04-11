@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    background: #333;
+    padding: 10px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.intro img {
+    width: 200px;
+}
+
+.state img {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #eee;
+}
