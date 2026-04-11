@@ -7,37 +7,50 @@
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* CONTAINER (consistent layout across pages) */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* HEADER */
 header {
-    background-color: #b9acd6;
+    background-color: #6c5ca5;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
 }
 
 .logo {
     width: 100px;
 }
 
-/* NAV */
+/* NAVIGATION */
 .navigation {
     list-style: none;
     display: flex;
 }
 
 .navigation li {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .navigation a {
     text-decoration: none;
-    padding: 10px 20px;
-    border: 1px solid #777;
+    padding: 10px 15px;
     background-color: #eee;
-    color: #000;
+    border: 1px solid #777;
+    color: black;
+}
+
+.navigation a:hover {
+    background-color: #ccc;
 }
 
 /* MAIN */
@@ -46,22 +59,78 @@ main {
     padding: 20px;
 }
 
-.company-info p {
-    margin: 5px 0;
+h1,
+h2,
+h3 {
+    margin-bottom: 10px;
 }
 
-/* CONTACT LAYOUT */
-.contact-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+/* HERO (HOME PAGE) */
+.hero {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    color: white;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+/* CALL TO ACTION */
+.cta {
     margin: 30px 0;
-    flex-wrap: wrap;
 }
 
-/* MAP */
+.button {
+    display: inline-block;
+    background-color: #5a4fcf;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #483bb5;
+}
+
+/* HOME GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+/* CONTACT PAGE */
+.company-info {
+    margin: 20px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: start;
+}
+
 .map iframe {
-    width: 400px;
+    width: 100%;
     height: 300px;
     border: none;
 }
@@ -69,21 +138,14 @@ main {
 /* FORM */
 .form-container form {
     display: grid;
-    grid-template-columns: 120px 250px;
     gap: 10px;
-    align-items: center;
 }
 
 .form-container input,
 .form-container textarea {
-    padding: 6px;
+    width: 100%;
+    padding: 8px;
     border: 1px solid #999;
-}
-
-.form-container p {
-    grid-column: 1 / -1;
-    text-align: left;
-    margin-top: 10px;
 }
 
 .form-container label {
@@ -94,36 +156,30 @@ textarea {
     height: 100px;
 }
 
-/* CHECKBOX */
 .checkbox {
-    grid-column: 1 / -1;
     text-align: left;
 }
 
 /* BUTTON */
 button {
-    grid-column: 1 / -1;
     padding: 10px;
-    background: #ddd;
-    border: 1px solid #999;
+    background: #5a4fcf;
+    color: white;
+    border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background: #ccc;
+    background: #483bb5;
 }
 
 /* EMPLOYEES */
 .employees {
-    border: 1px solid #999;
-    padding: 20px;
-    margin-top: 30px;
-
+    margin-top: 40px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-    text-align: center;
 }
 
 .employees h2 {
@@ -147,9 +203,45 @@ button:hover {
     font-size: 0.9rem;
 }
 
+/* TRIPS PAGE */
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.trips-grid img {
+    width: 100%;
+}
+
+.trip {
+    border: 1px solid #999;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+/* TABLE */
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.trip-table th,
+.trip-table td {
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+.trip-table th {
+    background-color: #ddd;
+}
+
 /* FOOTER */
 footer {
-    background-color: #b9acd6;
+    background-color: #6c5ca5;
+    color: white;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
@@ -158,4 +250,19 @@ footer {
 .socialmedia img {
     width: 30px;
     margin: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .grid,
+    .trips-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
